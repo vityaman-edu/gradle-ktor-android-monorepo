@@ -9,6 +9,7 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
+        maven("https://maven.pkg.jetbrains.space/public/p/ktor/eap")
     }
 }
 
@@ -21,4 +22,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "gradle-monorepo"
-include(":app")
+include(":frontend")
+include(":backend")

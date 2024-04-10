@@ -23,6 +23,10 @@
 hs_err_pid*
 replay_pid*
 
-local.properties
+# Gradle
 .gradle
 !gradle/wrapper/gradle-wrapper.jar
+build/
+
+# Configuration
+local.properties
