@@ -24,3 +24,4 @@ dependencyResolutionManagement {
 rootProject.name = "gradle-monorepo"
 include(":frontend")
 include(":backend")
+include(":shared")

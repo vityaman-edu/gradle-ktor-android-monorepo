@@ -71,6 +71,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     detektPlugins(libs.detekt.formatting)
+    implementation(project(":shared"))
 }
 
 detekt {

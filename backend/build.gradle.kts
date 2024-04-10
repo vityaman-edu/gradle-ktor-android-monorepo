@@ -23,6 +23,7 @@ dependencies {
     testImplementation(libs.kotlin.test.junit)
     testImplementation("io.ktor:ktor-server-tests-jvm")
     detektPlugins(libs.detekt.formatting)
+    implementation(project(":shared"))
 }
 
 detekt {

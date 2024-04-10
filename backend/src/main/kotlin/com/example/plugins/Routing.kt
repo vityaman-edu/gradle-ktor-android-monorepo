@@ -7,6 +7,7 @@ import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import io.ktor.server.routing.get
 import io.ktor.server.plugins.statuspages.*
+import com.example.projectName
 
 fun Application.configureRouting() {
     install(StatusPages) {
@@ -17,6 +18,10 @@ fun Application.configureRouting() {
     routing {
         get("/") {
             call.respondText("Hello World!")
+        }
+
+        get("/project-name") {
+            call.respondText(projectName())
         }
 
         get("/test1") {
