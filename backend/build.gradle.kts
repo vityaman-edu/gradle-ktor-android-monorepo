@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinJvm)
     kotlin("plugin.serialization") version "1.9.10"
     id("io.ktor.plugin") version "2.3.9"
+    alias(libs.plugins.detekt)
 }
 
 kotlin {
@@ -21,4 +22,10 @@ dependencies {
     implementation(libs.logback.classic)
     testImplementation(libs.kotlin.test.junit)
     testImplementation("io.ktor:ktor-server-tests-jvm")
+    detektPlugins(libs.detekt.formatting)
+}
+
+detekt {
+    buildUponDefaultConfig = true
+    config.setFrom(file("$rootDir/detekt.yml"))
 }
